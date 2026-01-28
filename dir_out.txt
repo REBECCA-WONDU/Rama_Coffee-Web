@@ -1,0 +1,31 @@
+ Volume in drive C has no label.
+ Volume Serial Number is 728F-B797
+
+ Directory of C:\Users\wribka\Documents\MyProjects\Rama Coffe
+
+01/26/2026  03:01 AM    <DIR>          .
+01/25/2026  11:41 PM    <DIR>          ..
+01/25/2026  11:59 PM    <DIR>          .git
+01/25/2026  11:57 PM               480 .gitignore
+01/26/2026  12:27 AM    <DIR>          .next
+01/26/2026  02:45 AM         2,622,449 all_files.txt
+01/25/2026  11:58 PM    <DIR>          app
+01/26/2026  02:16 AM    <DIR>          components
+01/26/2026  03:00 AM                 0 comp_all.txt
+01/26/2026  02:58 AM               132 comp_list.txt
+01/26/2026  03:01 AM                 0 dir_out.txt
+01/25/2026  11:57 PM               465 eslint.config.mjs
+01/26/2026  02:45 AM               430 files.txt
+01/26/2026  03:00 AM            23,446 hero_refs.txt
+01/26/2026  12:27 AM               247 next-env.d.ts
+01/25/2026  11:57 PM               133 next.config.ts
+01/26/2026  12:00 AM    <DIR>          node_modules
+01/26/2026  12:00 AM           227,524 package-lock.json
+01/26/2026  12:00 AM               565 package.json
+01/25/2026  11:57 PM                94 postcss.config.mjs
+01/26/2026  01:13 AM    <DIR>          public
+01/25/2026  11:57 PM             1,450 README.md
+01/25/2026  11:58 PM               666 tsconfig.json
+01/26/2026  12:05 AM            95,999 tsconfig.tsbuildinfo
+              16 File(s)      2,974,080 bytes
+               8 Dir(s)  137,020,678,144 bytes free

@@ -1,0 +1,6 @@
+C:\Users\wribka\Documents\MyProjects\Rama Coffe\app\layout.tsx
+C:\Users\wribka\Documents\MyProjects\Rama Coffe\app\page.tsx
+C:\Users\wribka\Documents\MyProjects\Rama Coffe\components\Footer.tsx
+C:\Users\wribka\Documents\MyProjects\Rama Coffe\components\MenuSection.tsx
+C:\Users\wribka\Documents\MyProjects\Rama Coffe\components\ProductsSection.tsx
+C:\Users\wribka\Documents\MyProjects\Rama Coffe\components\StorySection.tsx

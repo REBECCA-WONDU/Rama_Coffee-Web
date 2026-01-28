@@ -1,0 +1,8 @@
+C:\Users\wribka\Documents\MyProjects\Rama Coffe\all_hero_files.txt
+C:\Users\wribka\Documents\MyProjects\Rama Coffe\hero_refs.txt
+C:\Users\wribka\Documents\MyProjects\Rama Coffe\hero_refs_ascii.txt
+C:\Users\wribka\Documents\MyProjects\Rama Coffe\hero_search.txt
+C:\Users\wribka\Documents\MyProjects\Rama Coffe\public\rama-hero-integrated.png
+C:\Users\wribka\Documents\MyProjects\Rama Coffe\public\rama-hero-isolated.png
+C:\Users\wribka\Documents\MyProjects\Rama Coffe\public\rama-hero-seamless.png
+C:\Users\wribka\Documents\MyProjects\Rama Coffe\public\rama-hero.jpg
