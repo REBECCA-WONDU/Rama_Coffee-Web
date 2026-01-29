@@ -1,0 +1,16 @@
+C:\Users\wribka\Documents\MyProjects\Rama Coffe\RamaCoffee.Application\bin\Debug\net9.0\RamaCoffee.Application.deps.json
+C:\Users\wribka\Documents\MyProjects\Rama Coffe\RamaCoffee.Application\bin\Debug\net9.0\RamaCoffee.Application.dll
+C:\Users\wribka\Documents\MyProjects\Rama Coffe\RamaCoffee.Application\bin\Debug\net9.0\RamaCoffee.Application.pdb
+C:\Users\wribka\Documents\MyProjects\Rama Coffe\RamaCoffee.Application\bin\Debug\net9.0\RamaCoffee.Domain.dll
+C:\Users\wribka\Documents\MyProjects\Rama Coffe\RamaCoffee.Application\bin\Debug\net9.0\RamaCoffee.Domain.pdb
+C:\Users\wribka\Documents\MyProjects\Rama Coffe\RamaCoffee.Application\obj\Debug\net9.0\RamaCoffee.Application.csproj.AssemblyReference.cache
+C:\Users\wribka\Documents\MyProjects\Rama Coffe\RamaCoffee.Application\obj\Debug\net9.0\RamaCoffee.Application.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\wribka\Documents\MyProjects\Rama Coffe\RamaCoffee.Application\obj\Debug\net9.0\RamaCoffee.Application.AssemblyInfoInputs.cache
+C:\Users\wribka\Documents\MyProjects\Rama Coffe\RamaCoffee.Application\obj\Debug\net9.0\RamaCoffee.Application.AssemblyInfo.cs
+C:\Users\wribka\Documents\MyProjects\Rama Coffe\RamaCoffee.Application\obj\Debug\net9.0\RamaCoffee.Application.csproj.CoreCompileInputs.cache
+C:\Users\wribka\Documents\MyProjects\Rama Coffe\RamaCoffee.Application\obj\Debug\net9.0\RamaCoffee.Application.sourcelink.json
+C:\Users\wribka\Documents\MyProjects\Rama Coffe\RamaCoffee.Application\obj\Debug\net9.0\RamaCoff.66654FB8.Up2Date
+C:\Users\wribka\Documents\MyProjects\Rama Coffe\RamaCoffee.Application\obj\Debug\net9.0\RamaCoffee.Application.dll
+C:\Users\wribka\Documents\MyProjects\Rama Coffe\RamaCoffee.Application\obj\Debug\net9.0\refint\RamaCoffee.Application.dll
+C:\Users\wribka\Documents\MyProjects\Rama Coffe\RamaCoffee.Application\obj\Debug\net9.0\RamaCoffee.Application.pdb
+C:\Users\wribka\Documents\MyProjects\Rama Coffe\RamaCoffee.Application\obj\Debug\net9.0\ref\RamaCoffee.Application.dll

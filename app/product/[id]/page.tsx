@@ -98,9 +98,9 @@ export default function ProductPage() {
                     <span className="font-bold text-xs uppercase tracking-widest">Back to Collection</span>
                 </button>
 
-                <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-start">
                     {/* Product Image - Magic Integrated Hero Image - Zoomed Out to Fit */}
-                    <div className="relative aspect-[4/5] rounded-[3rem] overflow-hidden shadow-2xl bg-[#0f1c15] group max-h-[600px] flex items-center justify-center p-2">
+                    <div className="relative aspect-[3/4] rounded-[3rem] overflow-hidden shadow-2xl bg-[#0f1c15] group max-h-[500px] flex items-center justify-center p-2">
                         <Image
                             src="/rama-hero-integrated_magic (1).png"
                             alt="Rama Coffee Branding"
@@ -116,7 +116,7 @@ export default function ProductPage() {
 
                     {/* Product Info */}
                     <div className="flex flex-col">
-                        <div className="mb-6 p-6 bg-white rounded-3xl shadow-sm border border-rama-gold/10">
+                        <div className="mb-6 p-5 bg-white rounded-3xl shadow-sm border border-rama-gold/10">
                             <p className="text-rama-gold font-bold uppercase tracking-[0.3em] text-[10px] mb-2">{product.roast}</p>
                             <h1 className="text-4xl font-black text-rama-dark mb-2 leading-tight">{product.name}</h1>
                             <div className="flex items-center gap-4">

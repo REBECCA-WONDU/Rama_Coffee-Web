@@ -52,8 +52,8 @@ export default function ProductsSection() {
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
                     {products.map((product) => (
                         <Link key={product.id} href={`/product/${product.id}`}>
-                            <div className="group bg-white rounded-3xl p-6 shadow-sm hover:shadow-xl transition-all duration-300 border border-transparent hover:border-rama-gold/20 flex flex-col cursor-pointer h-full">
-                                <div className="relative h-64 w-full mb-6 rounded-2xl overflow-hidden shadow-inner bg-gray-50">
+                            <div className="group bg-white rounded-3xl p-6 shadow-sm hover:shadow-xl transition-all duration-300 border border-transparent hover:border-rama-gold/20 flex flex-col cursor-pointer">
+                                <div className="relative h-56 w-full mb-6 rounded-2xl overflow-hidden shadow-inner bg-gray-50">
                                     <Image
                                         src={product.image}
                                         alt={product.name}

@@ -1,0 +1,281 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\Users\\wribka\\Documents\\MyProjects\\Rama Coffe\\RamaCoffee.API\\RamaCoffee.API.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\wribka\\Documents\\MyProjects\\Rama Coffe\\RamaCoffee.API\\RamaCoffee.API.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\wribka\\Documents\\MyProjects\\Rama Coffe\\RamaCoffee.API\\RamaCoffee.API.csproj",
+        "projectName": "RamaCoffee.API",
+        "projectPath": "C:\\Users\\wribka\\Documents\\MyProjects\\Rama Coffe\\RamaCoffee.API\\RamaCoffee.API.csproj",
+        "packagesPath": "C:\\Users\\wribka\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\wribka\\Documents\\MyProjects\\Rama Coffe\\RamaCoffee.API\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\wribka\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net9.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net9.0": {
+            "targetAlias": "net9.0",
+            "projectReferences": {
+              "C:\\Users\\wribka\\Documents\\MyProjects\\Rama Coffe\\RamaCoffee.Infrastructure\\RamaCoffee.Infrastructure.csproj": {
+                "projectPath": "C:\\Users\\wribka\\Documents\\MyProjects\\Rama Coffe\\RamaCoffee.Infrastructure\\RamaCoffee.Infrastructure.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        },
+        "SdkAnalysisLevel": "9.0.300"
+      },
+      "frameworks": {
+        "net9.0": {
+          "targetAlias": "net9.0",
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[9.0.0, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[9.0.0, )"
+            },
+            "Swashbuckle.AspNetCore": {
+              "target": "Package",
+              "version": "[10.1.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.308/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\wribka\\Documents\\MyProjects\\Rama Coffe\\RamaCoffee.Application\\RamaCoffee.Application.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\wribka\\Documents\\MyProjects\\Rama Coffe\\RamaCoffee.Application\\RamaCoffee.Application.csproj",
+        "projectName": "RamaCoffee.Application",
+        "projectPath": "C:\\Users\\wribka\\Documents\\MyProjects\\Rama Coffe\\RamaCoffee.Application\\RamaCoffee.Application.csproj",
+        "packagesPath": "C:\\Users\\wribka\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\wribka\\Documents\\MyProjects\\Rama Coffe\\RamaCoffee.Application\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\wribka\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net9.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net9.0": {
+            "targetAlias": "net9.0",
+            "projectReferences": {
+              "C:\\Users\\wribka\\Documents\\MyProjects\\Rama Coffe\\RamaCoffee.Domain\\RamaCoffee.Domain.csproj": {
+                "projectPath": "C:\\Users\\wribka\\Documents\\MyProjects\\Rama Coffe\\RamaCoffee.Domain\\RamaCoffee.Domain.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        },
+        "SdkAnalysisLevel": "9.0.300"
+      },
+      "frameworks": {
+        "net9.0": {
+          "targetAlias": "net9.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.308/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\wribka\\Documents\\MyProjects\\Rama Coffe\\RamaCoffee.Domain\\RamaCoffee.Domain.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\wribka\\Documents\\MyProjects\\Rama Coffe\\RamaCoffee.Domain\\RamaCoffee.Domain.csproj",
+        "projectName": "RamaCoffee.Domain",
+        "projectPath": "C:\\Users\\wribka\\Documents\\MyProjects\\Rama Coffe\\RamaCoffee.Domain\\RamaCoffee.Domain.csproj",
+        "packagesPath": "C:\\Users\\wribka\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\wribka\\Documents\\MyProjects\\Rama Coffe\\RamaCoffee.Domain\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\wribka\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net9.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net9.0": {
+            "targetAlias": "net9.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        },
+        "SdkAnalysisLevel": "9.0.300"
+      },
+      "frameworks": {
+        "net9.0": {
+          "targetAlias": "net9.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.308/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\wribka\\Documents\\MyProjects\\Rama Coffe\\RamaCoffee.Infrastructure\\RamaCoffee.Infrastructure.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\wribka\\Documents\\MyProjects\\Rama Coffe\\RamaCoffee.Infrastructure\\RamaCoffee.Infrastructure.csproj",
+        "projectName": "RamaCoffee.Infrastructure",
+        "projectPath": "C:\\Users\\wribka\\Documents\\MyProjects\\Rama Coffe\\RamaCoffee.Infrastructure\\RamaCoffee.Infrastructure.csproj",
+        "packagesPath": "C:\\Users\\wribka\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\wribka\\Documents\\MyProjects\\Rama Coffe\\RamaCoffee.Infrastructure\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\wribka\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net9.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net9.0": {
+            "targetAlias": "net9.0",
+            "projectReferences": {
+              "C:\\Users\\wribka\\Documents\\MyProjects\\Rama Coffe\\RamaCoffee.Application\\RamaCoffee.Application.csproj": {
+                "projectPath": "C:\\Users\\wribka\\Documents\\MyProjects\\Rama Coffe\\RamaCoffee.Application\\RamaCoffee.Application.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        },
+        "SdkAnalysisLevel": "9.0.300"
+      },
+      "frameworks": {
+        "net9.0": {
+          "targetAlias": "net9.0",
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[9.0.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.308/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}
