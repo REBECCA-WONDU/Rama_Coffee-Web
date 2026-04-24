@@ -2,8 +2,10 @@
 
 import { useState, useEffect } from "react";
 import { useParams, useRouter } from "next/navigation";
+import Link from "next/link";
 import Image from "next/image";
 import { ArrowLeft, ShoppingBag, Star, ShieldCheck, Truck } from "lucide-react";
+import { motion } from "framer-motion";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { useCart } from "@/context/CartContext";
@@ -87,20 +89,31 @@ export default function ProductPage() {
 
     return (
         <div className="min-h-screen bg-rama-cream">
-            <Navbar />
+            <Navbar isLightBackground={true} />
 
-            <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-24 pb-12">
-                <button
-                    onClick={() => router.back()}
-                    className="flex items-center gap-2 text-rama-dark/60 hover:text-rama-dark transition-colors mb-6 group"
+            <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-32 pb-12 relative">
+                <motion.div 
+                    initial={{ opacity: 0, x: -10 }}
+                    animate={{ opacity: 1, x: 0 }}
+                    transition={{ duration: 0.5 }}
                 >
-                    <ArrowLeft className="h-4 w-4 group-hover:-translate-x-1 transition-transform" />
-                    <span className="font-bold text-xs uppercase tracking-widest">Back to Collection</span>
-                </button>
+                    <Link
+                        href="/#shop"
+                        className="inline-flex items-center gap-2 text-rama-dark/60 hover:text-rama-dark transition-colors mb-8 group cursor-pointer relative z-[110]"
+                    >
+                        <ArrowLeft className="h-4 w-4 group-hover:-translate-x-1 transition-transform" />
+                        <span className="font-bold text-xs uppercase tracking-widest">Back to Collection</span>
+                    </Link>
+                </motion.div>
 
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-start">
                     {/* Product Image - Magic Integrated Hero Image - Zoomed Out to Fit */}
-                    <div className="relative aspect-[3/4] rounded-[3rem] overflow-hidden shadow-2xl bg-[#0f1c15] group max-h-[500px] flex items-center justify-center p-2">
+                    <motion.div 
+                        initial={{ opacity: 0, scale: 0.95 }}
+                        animate={{ opacity: 1, scale: 1 }}
+                        transition={{ duration: 0.8, ease: "easeOut" }}
+                        className="relative aspect-[3/4] rounded-[3rem] overflow-hidden shadow-2xl bg-[#0f1c15] group max-h-[500px] flex items-center justify-center p-2"
+                    >
                         <Image
                             src="/rama-hero-integrated_magic (1).png"
                             alt="Rama Coffee Branding"
@@ -112,11 +125,16 @@ export default function ProductPage() {
                         <div className="absolute inset-0 bg-black/10"></div>
                         {/* Subtle bottom fade for a premium feel */}
                         <div className="absolute bottom-0 left-0 w-full h-1/6 bg-gradient-to-t from-[#0f1c15]/40 to-transparent"></div>
-                    </div>
+                    </motion.div>
 
                     {/* Product Info */}
                     <div className="flex flex-col">
-                        <div className="mb-6 p-5 bg-white rounded-3xl shadow-sm border border-rama-gold/10">
+                        <motion.div 
+                            initial={{ opacity: 0, y: 20 }}
+                            animate={{ opacity: 1, y: 0 }}
+                            transition={{ duration: 0.6, delay: 0.2 }}
+                            className="mb-6 p-5 bg-white rounded-3xl shadow-sm border border-rama-gold/10"
+                        >
                             <p className="text-rama-gold font-bold uppercase tracking-[0.3em] text-[10px] mb-2">{product.roast}</p>
                             <h1 className="text-4xl font-black text-rama-dark mb-2 leading-tight">{product.name}</h1>
                             <div className="flex items-center gap-4">
@@ -125,9 +143,14 @@ export default function ProductPage() {
                                 </div>
                                 <span className="text-[10px] text-rama-dark/40 font-bold uppercase tracking-widest">Premium Selection</span>
                             </div>
-                        </div>
+                        </motion.div>
 
-                        <div className="mb-6">
+                        <motion.div 
+                            initial={{ opacity: 0, y: 20 }}
+                            animate={{ opacity: 1, y: 0 }}
+                            transition={{ duration: 0.6, delay: 0.3 }}
+                            className="mb-6"
+                        >
                             <h3 className="text-xs font-bold text-rama-dark uppercase tracking-widest mb-2">Description</h3>
                             <p className="text-rama-dark/70 leading-relaxed text-base italic">
                                 "{product.notes}"
@@ -135,9 +158,14 @@ export default function ProductPage() {
                             <p className="text-rama-dark/60 mt-2 leading-relaxed text-sm">
                                 {product.description}
                             </p>
-                        </div>
+                        </motion.div>
 
-                        <div className="mb-8">
+                        <motion.div 
+                            initial={{ opacity: 0, y: 20 }}
+                            animate={{ opacity: 1, y: 0 }}
+                            transition={{ duration: 0.6, delay: 0.4 }}
+                            className="mb-8"
+                        >
                             <h3 className="text-xs font-bold text-rama-dark uppercase tracking-widest mb-3">Packaging Choice</h3>
                             <div className="flex gap-3">
                                 {PACKAGING_OPTIONS.map((size) => (
@@ -156,9 +184,14 @@ export default function ProductPage() {
                                     </button>
                                 ))}
                             </div>
-                        </div>
+                        </motion.div>
 
-                        <div className="pt-6 border-t border-rama-dark/10">
+                        <motion.div 
+                            initial={{ opacity: 0, y: 20 }}
+                            animate={{ opacity: 1, y: 0 }}
+                            transition={{ duration: 0.6, delay: 0.5 }}
+                            className="pt-6 border-t border-rama-dark/10"
+                        >
                             <div className="flex flex-col sm:flex-row gap-4">
                                 <button
                                     onClick={handleOrderNow}
@@ -174,9 +207,14 @@ export default function ProductPage() {
                                     Add to Bag
                                 </button>
                             </div>
-                        </div>
+                        </motion.div>
 
-                        <div className="grid grid-cols-3 gap-3 mt-8">
+                        <motion.div 
+                            initial={{ opacity: 0 }}
+                            animate={{ opacity: 1 }}
+                            transition={{ duration: 0.8, delay: 0.7 }}
+                            className="grid grid-cols-3 gap-3 mt-8"
+                        >
                             <div className="flex flex-col items-center text-center p-3 bg-white/50 rounded-xl">
                                 <ShieldCheck className="h-5 w-5 text-rama-gold mb-1" />
                                 <span className="text-[8px] font-bold uppercase tracking-widest text-rama-dark/60">Quality</span>
@@ -189,7 +227,7 @@ export default function ProductPage() {
                                 <ShoppingBag className="h-5 w-5 text-rama-gold mb-1" />
                                 <span className="text-[8px] font-bold uppercase tracking-widest text-rama-dark/60">Freshly Roasted</span>
                             </div>
-                        </div>
+                        </motion.div>
                     </div>
                 </div>
             </main>

@@ -1,7 +1,22 @@
+"use client";
 
 import { ShoppingBag } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
+import { motion } from "framer-motion";
+
+const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+        opacity: 1,
+        transition: { staggerChildren: 0.12 }
+    }
+};
+
+const cardVariants = {
+    hidden: { opacity: 0, y: 40 },
+    visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" } }
+};
 
 const products = [
     {
@@ -42,55 +57,75 @@ export default function ProductsSection() {
     return (
         <section id="shop" className="py-24 bg-white">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div className="text-center mb-16">
+                <motion.div
+                    initial={{ opacity: 0, y: -20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.7 }}
+                    className="text-center mb-16"
+                >
                     <h2 className="text-4xl font-bold text-rama-dark mb-4">Our Roasted Collection</h2>
                     <p className="text-rama-dark/70 max-w-2xl mx-auto">
                         Small batch roasted beans from the finest regions of Ethiopia.
                     </p>
-                </div>
+                </motion.div>
 
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <motion.div
+                    variants={containerVariants}
+                    initial="hidden"
+                    whileInView="visible"
+                    viewport={{ once: true, margin: "-80px" }}
+                    className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"
+                >
                     {products.map((product) => (
-                        <Link key={product.id} href={`/product/${product.id}`}>
-                            <div className="group bg-white rounded-3xl p-6 shadow-sm hover:shadow-xl transition-all duration-300 border border-transparent hover:border-rama-gold/20 flex flex-col cursor-pointer">
-                                <div className="relative h-56 w-full mb-6 rounded-2xl overflow-hidden shadow-inner bg-gray-50">
-                                    <Image
-                                        src={product.image}
-                                        alt={product.name}
-                                        fill
-                                        className="object-cover transition-transform duration-700 group-hover:scale-110"
-                                    />
-                                    <div className="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-                                        <div className="bg-white text-rama-dark px-4 py-2 rounded-full text-xs font-bold hover:bg-rama-gold transition-colors">
-                                            View Details
+                        <motion.div 
+                            key={product.id} 
+                            variants={cardVariants}
+                            whileHover={{ y: -12 }}
+                            transition={{ type: "spring", stiffness: 300, damping: 20 }}
+                        >
+                            <Link href={`/product/${product.id}`}>
+                                <div className="group bg-white rounded-3xl p-6 shadow-sm hover:shadow-xl transition-all duration-300 border border-transparent hover:border-rama-gold/20 flex flex-col cursor-pointer h-full">
+                                    <div className="relative h-56 w-full mb-6 rounded-2xl overflow-hidden shadow-inner bg-gray-50">
+                                        <Image
+                                            src={product.image}
+                                            alt={product.name}
+                                            fill
+                                            className="object-cover transition-transform duration-700 group-hover:scale-110"
+                                        />
+                                        <div className="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                                            <div className="bg-white text-rama-dark px-4 py-2 rounded-full text-xs font-bold hover:bg-rama-gold transition-colors">
+                                                View Details
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div className="space-y-3 flex-1 flex flex-col">
+                                        <div className="flex justify-between items-start">
+                                            <div>
+                                                <p className="text-[10px] font-bold text-rama-gold uppercase tracking-[0.2em] mb-1">{product.roast}</p>
+                                                <h3 className="text-lg font-black text-rama-dark leading-tight">{product.name}</h3>
+                                            </div>
+                                        </div>
+
+                                        <p className="text-sm text-gray-600 leading-relaxed italic flex-1">
+                                            &ldquo;{product.notes}&rdquo;
+                                        </p>
+
+                                        <div className="flex items-center justify-between pt-4 border-t border-gray-100 mt-auto">
+                                            <span className="font-bold text-xl text-rama-dark">{product.price}</span>
+                                            <div className="bg-rama-dark text-white p-2.5 rounded-full hover:bg-rama-gold hover:text-rama-dark transition-all duration-300">
+                                                <ShoppingBag className="h-5 w-5" />
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
-
-                                <div className="space-y-3 flex-1 flex flex-col">
-                                    <div className="flex justify-between items-start">
-                                        <div>
-                                            <p className="text-[10px] font-bold text-rama-gold uppercase tracking-[0.2em] mb-1">{product.roast}</p>
-                                            <h3 className="text-lg font-black text-rama-dark leading-tight">{product.name}</h3>
-                                        </div>
-                                    </div>
-
-                                    <p className="text-sm text-gray-600 leading-relaxed italic flex-1">
-                                        &ldquo;{product.notes}&rdquo;
-                                    </p>
-
-                                    <div className="flex items-center justify-between pt-4 border-t border-gray-100 mt-auto">
-                                        <span className="font-bold text-xl text-rama-dark">{product.price}</span>
-                                        <div className="bg-rama-dark text-white p-2.5 rounded-full hover:bg-rama-gold hover:text-rama-dark transition-all duration-300">
-                                            <ShoppingBag className="h-5 w-5" />
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </Link>
+                            </Link>
+                        </motion.div>
                     ))}
-                </div>
+                </motion.div>
             </div>
         </section>
     );
 }
+

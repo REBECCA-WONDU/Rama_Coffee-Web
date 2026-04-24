@@ -13,15 +13,20 @@ export default function Home() {
   const router = useRouter();
 
   useEffect(() => {
-    // If the page is refreshed, ensure we are at the top and hash is cleared
+    // Handle hash navigation (e.g., /#shop)
     if (typeof window !== "undefined") {
-      const perfEntries = performance.getEntriesByType("navigation");
-      if (perfEntries.length > 0 && (perfEntries[0] as any).type === "reload") {
-        window.scrollTo(0, 0);
-        router.replace("/");
+      const hash = window.location.hash;
+      if (hash) {
+        // Wait a bit for the page content to be fully rendered
+        setTimeout(() => {
+          const element = document.querySelector(hash);
+          if (element) {
+            element.scrollIntoView({ behavior: "smooth" });
+          }
+        }, 100);
       }
     }
-  }, [router]);
+  }, []);
 
   return (
     <main className="min-h-screen">

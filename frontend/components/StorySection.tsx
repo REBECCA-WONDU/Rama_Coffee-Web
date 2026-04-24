@@ -1,12 +1,21 @@
 
+"use client";
+
 import Image from "next/image";
+import { motion } from "framer-motion";
 
 export default function StorySection() {
     return (
-        <section id="our-story" className="py-20 bg-rama-cream">
+        <section id="our-story" className="py-20 bg-rama-cream overflow-hidden">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-                    <div className="relative h-[450px] w-full rounded-2xl overflow-hidden shadow-2xl group">
+                    <motion.div 
+                        initial={{ opacity: 0, x: -50 }}
+                        whileInView={{ opacity: 1, x: 0 }}
+                        viewport={{ once: true, margin: "-100px" }}
+                        transition={{ duration: 0.8 }}
+                        className="relative h-[450px] w-full rounded-2xl overflow-hidden shadow-2xl group"
+                    >
                         <Image
                             src="/highlands-coffee.png"
                             alt="Ethiopian Coffee Highlands"
@@ -18,9 +27,15 @@ export default function StorySection() {
                             <p className="text-white text-sm font-bold uppercase tracking-widest">Our Heritage</p>
                             <p className="text-white/80 text-xs mt-1 italic">Highlands of Sidamo, Ethiopia</p>
                         </div>
-                    </div>
+                    </motion.div>
 
-                    <div className="space-y-6">
+                    <motion.div 
+                        initial={{ opacity: 0, x: 50 }}
+                        whileInView={{ opacity: 1, x: 0 }}
+                        viewport={{ once: true, margin: "-100px" }}
+                        transition={{ duration: 0.8 }}
+                        className="space-y-6"
+                    >
                         <h2 className="text-4xl font-bold text-rama-dark">Our Story</h2>
                         <div className="w-20 h-1 bg-rama-gold"></div>
                         <p className="text-lg text-rama-dark/80 leading-relaxed">
@@ -29,7 +44,7 @@ export default function StorySection() {
                         <p className="text-lg text-rama-dark/80 leading-relaxed">
                             Riders and guests can expect typical Ethiopian coffee culture, which emphasises brewed coffee alongside a social atmosphere. Our café in Addis Ababa features a welcoming restaurant setting that serves both great food and exceptional coffee.
                         </p>
-                    </div>
+                    </motion.div>
                 </div>
             </div>
         </section>

@@ -39,7 +39,7 @@ const FlowerLogo = ({ className }: { className?: string }) => (
     </svg>
 );
 
-export default function Navbar() {
+export default function Navbar({ isLightBackground = false }: { isLightBackground?: boolean }) {
     const [isScrolled, setIsScrolled] = useState(false);
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
     const { cartCount } = useCart();
@@ -60,15 +60,34 @@ export default function Navbar() {
         { name: "Contact", href: "/#contact" },
     ];
 
+    // Determine text and logo colors based on scroll state and background type
+    const textColorClass = isScrolled 
+        ? "text-white/60" 
+        : isLightBackground 
+            ? "text-rama-dark/60" 
+            : "text-white/60";
+    
+    const brandColorClass = isScrolled
+        ? "text-white"
+        : isLightBackground
+            ? "text-rama-dark"
+            : "text-white";
+
+    const iconColorClass = isScrolled
+        ? "text-white/80"
+        : isLightBackground
+            ? "text-rama-dark/80"
+            : "text-white/80";
+
     return (
         <>
             <nav
-                className={`fixed top-0 left-0 right-0 z-[100] transition-all duration-700 ${isScrolled
+                className={`fixed top-0 left-0 right-0 z-[100] transition-all duration-700 pointer-events-none ${isScrolled
                     ? "bg-[#0f1c15]/80 backdrop-blur-xl py-3 border-b border-white/5"
                     : "bg-transparent py-6"
                     }`}
             >
-                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pointer-events-auto">
                     <div className="flex justify-between items-center">
                         {/* Logo */}
                         <Link href="/" className="flex items-center gap-3 group">
@@ -76,7 +95,7 @@ export default function Navbar() {
                                 <FlowerLogo className="h-7 w-7 text-[#0f1c15]" />
                             </div>
                             <div className="flex flex-col gap-0 leading-none">
-                                <span className="text-xl font-black text-white tracking-tighter uppercase">
+                                <span className={`text-xl font-black ${brandColorClass} tracking-tighter uppercase transition-colors`}>
                                     RAMA
                                 </span>
                                 <span className="text-[10px] text-rama-gold font-serif italic tracking-[0.2em]">
@@ -92,7 +111,7 @@ export default function Navbar() {
                                     <a
                                         key={link.name}
                                         href={link.href}
-                                        className="text-white/60 hover:text-rama-gold transition-all font-bold text-[10px] uppercase tracking-[0.3em] relative group"
+                                        className={`${textColorClass} hover:text-rama-gold transition-all font-bold text-[10px] uppercase tracking-[0.3em] relative group`}
                                     >
                                         {link.name}
                                         <span className="absolute -bottom-1 left-0 w-0 h-[1px] bg-rama-gold transition-all group-hover:w-full"></span>
@@ -100,14 +119,14 @@ export default function Navbar() {
                                 ))}
                             </div>
 
-                            <div className="h-8 w-px bg-white/10 mx-2"></div>
+                            <div className={`h-8 w-px ${isLightBackground && !isScrolled ? 'bg-rama-dark/10' : 'bg-white/10'} mx-2 transition-colors`}></div>
 
                             <div className="flex items-center gap-6">
-                                <Link href={isAuthenticated ? "/profile" : "/login"} className="text-white/80 hover:text-rama-gold transition-colors p-1">
+                                <Link href={isAuthenticated ? "/profile" : "/login"} className={`${iconColorClass} hover:text-rama-gold transition-colors p-1`}>
                                     <User className="h-5 w-5" />
                                 </Link>
                                 <div className="relative">
-                                    <Link href="/cart" className="text-white/80 hover:text-rama-gold transition-colors p-1">
+                                    <Link href="/cart" className={`${iconColorClass} hover:text-rama-gold transition-colors p-1`}>
                                         <ShoppingCart className="h-5 w-5" />
                                     </Link>
                                     <span className="absolute -top-1 -right-1 w-4 h-4 bg-rama-gold text-[#0f1c15] text-[10px] font-bold rounded-full flex items-center justify-center">{cartCount}</span>
@@ -120,13 +139,13 @@ export default function Navbar() {
 
                         {/* Mobile Menu Toggle */}
                         <div className="md:hidden flex items-center gap-4">
-                            <button className="text-white p-2 relative">
+                            <button className={`${brandColorClass} p-2 relative transition-colors`}>
                                 <ShoppingCart className="h-6 w-6" />
                                 <span className="absolute top-1 right-1 w-3 h-3 bg-rama-gold rounded-full"></span>
                             </button>
                             <button
                                 onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-                                className="text-white p-1"
+                                className={`${brandColorClass} p-1 transition-colors`}
                             >
                                 <Menu className="h-8 w-8" />
                             </button>

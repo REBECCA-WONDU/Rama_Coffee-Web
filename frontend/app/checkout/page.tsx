@@ -54,9 +54,9 @@ export default function CheckoutPage() {
 
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-32 pb-20">
                 <div className="flex items-center gap-4 mb-12">
-                    <Link href="/cart" className="p-2 hover:bg-white/5 rounded-full transition-colors">
+                    <a href="/cart" className="p-2 hover:bg-white/5 rounded-full transition-colors cursor-pointer">
                         <ArrowLeft className="h-6 w-6 text-rama-gold" />
-                    </Link>
+                    </a>
                     <h1 className="text-4xl md:text-5xl font-black uppercase tracking-tighter">Secure <span className="text-rama-gold">Checkout</span></h1>
                 </div>
 
