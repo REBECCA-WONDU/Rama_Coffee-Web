@@ -1,7 +1,7 @@
 
 "use client";
 import Link from "next/link";
-import { motion } from "framer-motion";
+import { motion, Variants } from "framer-motion";
 import { Coffee } from "lucide-react";
 
 const menuItems = [
@@ -13,7 +13,7 @@ const menuItems = [
     { name: "Mocha", price: "85 ETB", desc: "Espresso, chocolate, steamed milk" },
 ];
 
-const containerVariants = {
+const containerVariants: Variants = {
     hidden: { opacity: 0 },
     visible: {
         opacity: 1,
@@ -23,7 +23,7 @@ const containerVariants = {
     }
 };
 
-const itemVariants = {
+const itemVariants: Variants = {
     hidden: { opacity: 0, y: 20 },
     visible: { opacity: 1, y: 0 }
 };
